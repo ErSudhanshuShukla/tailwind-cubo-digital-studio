@@ -8,14 +8,14 @@ https://tailwind-cubo-digital-studio-sudhanshu.vercel.app/
 
 ## 💻 Preview
 
-### Desktop & Mobile
+* Desktop & Mobile
 
 <p align="center">
   <img src="./preview/mobile.jpg" width="20%">
   <img src="./preview/desktop.jpg" width="75%">
 </p>
 
-### Tablet Views
+* Tablet Views
 
 <p align="center">
   <img src="./preview/tablet-portrait.jpg" width="30%">
