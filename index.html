@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>CUBO Digital Studio</title>
+    <link
+      rel="shortcut icon"
+      href="assets/overlap-circle.png"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <style>
+      button {
+        transition: all 0.3s ease-in-out;
+      }
+      i,
+      button {
+        cursor: pointer;
+      }
+      @font-face {
+        font-family: satoshi;
+        src: url(font/Satoshi-Regular.otf);
+      }
+      * {
+        font-family: satoshi;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <!-- main wrapper -->
+    <div
+      class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-14 xl:grid-rows-9 gap-2 p-2 md:gap-4 md:p-4 xl:h-screen"
+    >
+      <!-- Navbar - max - lg -->
+      <nav
+        class="xl:hidden col-span-2 flex justify-between items-center p-2 sticky top-0 z-50 bg-black lg:col-span-3"
+      >
+        <!-- logo -->
+        <div class="flex gap-1 items-center">
+          <div>
+            <img
+              src="assets/overlap-circle-white.png"
+              class="h-12"
+              alt="image not found"
+            />
+          </div>
+          <div class="font-bold">
+            <p class="text-2xl text-white">CUBO</p>
+            <p class="text-sm text-pink-400">Digital Studio</p>
+          </div>
+        </div>
+
+        <!-- profile -->
+        <div class="flex gap-2 cursor-pointer items-center text-gray-200">
+          <i class="ri-notification-3-line text-4xl animate-pulse text-4xl"></i>
+          <img
+            src="https://images.unsplash.com/photo-1629747490241-624f07d70e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+            class="w-12 h-12 rounded-full object-cover border-2 border-white"
+            alt="no image found"
+          />
+          <span class="font-bold"
+            >Sudhanshu <br />
+            (Admin)
+            <i class="ri-arrow-down-s-line text-lg"></i
+          ></span>
+        </div>
+      </nav>
+
+      <!-- Navbar - desktop -->
+      <nav
+        class="xl:row-span-9 xl:col-span-2 bg-white rounded-3xl px-3 py-5 hidden xl:block flex flex-col justify-around lg:row-span-4"
+      >
+        <!-- logo -->
+        <div class="flex gap-1 justify-center pb-5 xl:border-b border-gray-300">
+          <div>
+            <img
+              src="assets/overlap-circle.png"
+              class="h-14"
+              alt="image not found"
+            />
+          </div>
+          <div class="font-bold">
+            <p class="text-3xl">CUBO</p>
+            <p class="text-sm text-pink-500">Digital Studio</p>
+          </div>
+        </div>
+        <!-- tools -->
+        <div class="lg:flex lg:flex-col py-5 xl:border-b border-gray-300">
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-home-9-line text-3xl"></i>
+            <span class="font-bold">Dashboard</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-folder-6-line text-3xl"></i>
+            <span class="font-bold">Projects</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-bar-chart-fill text-3xl"></i>
+            <span class="font-bold">Analytics</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-group-line text-3xl"></i>
+            <span class="font-bold">Clients</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-team-line text-3xl"></i>
+            <span class="font-bold">Team</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-file-text-line text-3xl"></i>
+            <span class="font-bold">Reports</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-settings-line text-3xl"></i>
+            <span class="font-bold">Settings</span>
+          </div>
+        </div>
+        <!-- search notification -->
+        <div class="flex flex-col py-5 xl:border-b border-gray-300">
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-search-line text-3xl"></i>
+            <span class="font-bold">Search</span>
+          </div>
+          <div
+            class="gap-3 flex items-center py-1 px-3 rounded-3xl hover:bg-[#FDEAF0] hover:text-[#FF4D7D] transition-all duration-300 ease-in-out cursor-pointer"
+          >
+            <i class="ri-notification-3-line text-3xl"></i>
+            <span class="font-bold">Notifications</span>
+          </div>
+        </div>
+        <!-- profile -->
+        <div
+          class="flex py-5 gap-2 justify-evenly cursor-pointer hover:text-[#FF4D7D] transition-all duration-300 ease-in-out"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1629747490241-624f07d70e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+            class="w-14 h-14 rounded-full object-cover border-2 border-white mx-0"
+            alt="no image found"
+          />
+          <span class="font-bold">Sudhanshu <br />(Admin)</span>
+          <i class="ri-arrow-down-s-line text-xl font-bold"></i>
+        </div>
+      </nav>
+
+      <!-- CARD - brand of designing -->
+      <div
+        class="flex flex-col justify-between md:items-start row-span-2 xl:col-span-3 xl:row-span-5 rounded-3xl bg-[#FBF7F8] p-4 md:p-5 gap-5 xl:gap-2 lg:col-span-1 lg:row-span-2"
+      >
+        <!-- heading -->
+        <div class="flex justify-between text-lg font-bold w-full">
+          <h1 class="text-center xl:text-start">Brand of Designing</h1>
+          <i class="ri-more-fill hidden md:block text-2xl"></i>
+        </div>
+
+        <!-- stats -->
+        <div class="flex justify-between flex-col gap-2 h-full">
+          <!-- 1 -->
+          <div class="flex items-center gap-3">
+            <i
+              class="ri-bar-chart-box-line text-[#FD778E] bg-white px-2 py-1 rounded-xl text-3xl lg:text-2xl"
+            ></i>
+            <div class="font-bold">
+              <h2 class="text-2xl">2.5K</h2>
+              <p class="text-gray-600">Contributions</p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="flex items-center gap-3">
+            <i
+              class="ri-folder-line text-[#FD778E] bg-white px-2 py-1 rounded-xl text-3xl lg:text-2xl"
+            ></i>
+            <div class="font-bold">
+              <h2 class="text-2xl">98</h2>
+              <p class="text-gray-600">Projects</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="flex items-center gap-3">
+            <i
+              class="ri-star-line text-[#FD778E] bg-white px-2 py-1 rounded-xl text-3xl lg:text-2xl"
+            ></i>
+            <div class="font-bold">
+              <h2 class="text-2xl">4.8</h2>
+              <p class="text-gray-600">Client Rating</p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="flex items-center gap-3">
+            <i
+              class="ri-group-line text-[#FD778E] bg-white px-2 py-1 rounded-xl text-3xl lg:text-2xl"
+            ></i>
+            <div class="font-bold">
+              <h2 class="text-2xl">120+</h2>
+              <p class="text-gray-600">Active Clients</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- button -->
+        <button
+          class="py-2 px-4 bg-white rounded-3xl border border-pink-200 font-bold hover:bg-[#FDEAF0] hover:text-[#FF4D7D]"
+        >
+          View Report <i class="ri-arrow-right-s-line"></i>
+        </button>
+      </div>
+
+      <!-- CARD - project views -->
+      <div
+        class="row-span-1 xl:col-span-3 xl:row-span-3 bg-[#FBF7F8] rounded-3xl p-4 md:p-5 flex flex-col gap-1 justify-between lg:col-span-1 lg:row-span-1"
+      >
+        <div class="flex justify-between items-center">
+          <p class="text-4xl font-bold md:text-6xl">4.875</p>
+          <button
+            class="text-3xl px-2 py-1 md:text-4xl text-[#F15065] bg-[#FDDFE1] md:px-3 md:py-2.5 rounded-full"
+          >
+            <i class="ri-heart-fill"></i>
+          </button>
+        </div>
+        <h1 class="font-bold md:text-xl">
+          Project Views <br />
+          Last Year
+        </h1>
+        <div class="flex gap-1 items-center">
+          <button
+            class="flex items-center border border-[#FDDFE1] px-1 md:px-2 rounded-3xl gap-1"
+          >
+            <img
+              src="assets/Graph Arrow Increase.png"
+              class="h-5"
+              alt="img not found"
+            />
+            +15%
+          </button>
+          <h1 class="text-base font-bold">vs last year</h1>
+        </div>
+      </div>
+
+      <!-- CARD - new users -->
+      <div
+        class="row-span-1 xl:col-span-3 xl:row-span-3 bg-[#FBF7F8] rounded-3xl p-4 md:p-5 flex flex-col gap-1 justify-between lg:col-span-1 lg:row-span-1"
+      >
+        <h1 class="font-bold text-xl">New Users</h1>
+        <p class="font-bold text-4xl md:text-7xl">57K</p>
+        <div class="flex items-end justify-between">
+          <div class="font-bold">
+            <h1 class="text-green-700 text-base md:text-xl">
+              +10%<i class="ri-arrow-right-up-line"></i>
+            </h1>
+            <h1 class="text-base">vs last month</h1>
+          </div>
+          <i
+            class="ri-group-line bg-[#FDDFE1] text-3xl px-2 py-1 md:text-4xl md:p-3 rounded-2xl"
+          ></i>
+        </div>
+      </div>
+
+      <!-- CARD - passionate developer -->
+      <div
+        class="row-span-1 col-span-2 xl:col-span-3 xl:row-span-6 bg-[#FBF7F8] rounded-3xl p-4 md:p-5 gap-5 flex flex-col md:flex-row xl:flex-col justify-between lg:col-span-2 lg:row-span-1"
+      >
+        <div class="flex flex-col gap-5">
+          <h1 class="text-xl font-bold">
+            Team of passionate<br class="hidden md:block" />
+            designers and <br class="hidden md:block" />developers
+          </h1>
+          <div
+            class="flex border-b border-gray-300 pb-5 xl:pb-5 md:pb-0 md:border-white xl:border-b xl:border-gray-300"
+          >
+            <!-- profile -->
+            <img
+              src="https://images.unsplash.com/photo-1596075780750-81249df16d19?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+              class="w-15 h-15 border-3 border-white rounded-full object-cover z-40"
+              alt="no image found"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+              class="w-15 h-15 border-3 border-white rounded-full object-cover -mx-2 z-30"
+              alt="no image found"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+              class="w-15 h-15 border-3 border-white rounded-full object-cover -mx-2 z-20 lg:hidden xl:block"
+              alt="no image found"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njl8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+              class="w-15 h-15 border-3 border-white rounded-full object-cover -mx-2 z-10 lg:hidden xl:block"
+              alt="no image found"
+            />
+            <div
+              class="w-15 h-15 border-3 border-white rounded-full bg-[#2A2A2A] text-white -mx-2 flex justify-center items-center"
+            >
+              <span class="lg:hidden xl:block">+2</span>
+              <span class="hidden lg:block xl:hidden">+4</span>
+            </div>
+          </div>
+        </div>
+        <!-- bottom -->
+        <div
+          class="flex gap-5 xl:gap-0 flex-row items-center xl:flex-col xl:items-start xl:justify-between"
+        >
+          <div
+            class="flex gap-5 flex-row items-center xl:flex-col xl:items-start"
+          >
+            <h1 class="text-xm md:text-xl font-bold">
+              Daily <br />
+              New Clients
+            </h1>
+            <p class="text-6xl md:text-7xl lg:text-6xl font-bold">54</p>
+          </div>
+
+          <div class="flex items-center md:items-end justify-between w-full">
+            <div class="font-bold">
+              <h1 class="text-[#E43C5A] text-xl">
+                +40%<i class="ri-arrow-right-up-line"></i>
+              </h1>
+              <h1>vs yesterday</h1>
+            </div>
+            <i
+              class="ri-user-add-line bg-[#FDDFE1] text-4xl p-3 rounded-2xl"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD - center -->
+      <div
+        class="relative col-span-2 row-span-2 xl:col-span-6 xl:row-span-4 bg-[#FBE4E5] rounded-3xl min-h-[350px] xl:min-h-fit lg:col-span-3 lg:row-span-2"
+      >
+        <!-- circle -->
+        <div
+          class="absolute bg-[#FDC8CF] w-80 h-80 xl:h-70 xl:w-70 rounded-full left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2"
+        ></div>
+        <!-- main img -->
+        <img
+          src="assets/cover.png"
+          class="z-10 absolute w-62 xl:w-54 bottom-0 left-[50%] -translate-x-1/2"
+          alt="img not found"
+        />
+        <!-- project growth -->
+        <div
+          class="absolute rounded-2xl top-[40%] left-[3%] md:top-[35%] md:left-[18%] xl:left-[12%] -translate-y-1/2 z-20 p-2 bg-[#FEFEFE] animate-[bounce_6s_ease-in-out_infinite]"
+        >
+          <div class="flex justify-between text-xs md:text-base font-bold">
+            <h5>Project Growth</h5>
+            <i class="ri-more-2-fill"></i>
+          </div>
+          <img
+            src="assets/growth-graph.png"
+            class="h-12 md:h-18"
+            alt="image not found"
+          />
+        </div>
+        <!-- conversion age -->
+        <div
+          class="absolute rounded-2xl top-[32%] right-[3%] md:top-[35%] md:right-[12%] xl:right-[11%] -translate-y-1/2 z-20 p-2 bg-[#FEFEFE] animate-[bounce_6s_ease-in-out_infinite]"
+        >
+          <div class="flex justify-between text-xs md:text-base font-bold">
+            <h5>Conversion Age</h5>
+            <i class="ri-more-2-fill"></i>
+          </div>
+          <img
+            src="assets/graph2.png"
+            class="h-12 md:h-22 xl:h-18"
+            alt="image not found"
+          />
+        </div>
+        <!-- player -->
+        <div
+          class="flex items-center gap-2 absolute rounded-4xl top-[70%] left-[5%] md:top-[70%] md:left-[14%] xl:left-[8%] -translate-y-1/2 z-20 p-2 pr-4 md:pr-7 bg-[#FEFEFE] animate-[bounce_6s_ease-in-out_infinite]"
+        >
+          <i
+            class="flex ri-play-fill play text-2xl text-white bg-[#FA5871] rounded-full px-1"
+          ></i>
+          <div class="text-xs md:text-sm">
+            <h1 class="font-bold">26.807</h1>
+            <p>Total Plays</p>
+          </div>
+        </div>
+        <!-- engagement -->
+        <div
+          class="absolute rounded-2xl top-[75%] right-[4%] md:top-[78%] md:right-[16%] xl:right-[12%] -translate-y-1/2 z-20 px-3 py-2 bg-[#FEFEFE] animate-[bounce_6s_ease-in-out_infinite]"
+        >
+          <div class="flex justify-between items-center">
+            <i
+              class="ri-heart-fill text-xl px-2 py-1 text-[#F15065] bg-[#FDDFE1] rounded-full"
+            ></i>
+            <i class="ri-more-2-fill md:text-xl"></i>
+          </div>
+          <h1 class="text-2xl font-bold">19,46%</h1>
+          <h1 class="text-xs font-bold">Engagement Rate</h1>
+          <div class="text-green-700">
+            <i class="ri-arrow-right-up-line text-xs font-bold"></i>
+            +102,48%
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD - smart digital agency -->
+      <div
+        class="row-span-1 col-span-2 md:col-span-1 xl:col-span-3 xl:row-span-4 rounded-3xl p-4 md:p-5 flex bg-gradient-to-br from-[#6A2C70] via-[#8B3A8E] to-[#A63D8F] justify-around lg:col-span-2 lg:row-span-1"
+      >
+        <div class="flex flex-col font-bold xl:justify-between gap-2 xl:gap-0">
+          <div class="flex justify-between">
+            <h3 class="text-xl text-white">
+              Smart Digital <br />
+              Agency for Your <br />
+              <span class="text-pink-300">Business</span>
+            </h3>
+            <i
+              class="ri-arrow-right-up-line bg-black w-10 h-10 rounded-full flex justify-center items-center text-white text-2xl"
+            ></i>
+          </div>
+          <div class="flex gap-5">
+            <img
+              src="assets/img2.png"
+              class="w-40 md:w-[40%] xl:h-[90%] rounded-2xl object-cover"
+              alt="image not found"
+            />
+            <img
+              src="assets/img1.png"
+              class="w-40 md:w-[40%] xl:h-[90%] rounded-2xl object-cover"
+              alt="image not found"
+            />
+          </div>
+          <div class="flex">
+            <img
+              src="https://images.unsplash.com/photo-1629747490241-624f07d70e1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxwb3J0cmFpdHxlbnwwfHwwfHx8MA%3D%3D"
+              class="w-10 h-10 rounded-full object-cover border-2 border-white mx-0"
+              alt="no image found"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1682096252599-e8536cd97d2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-10 h-10 rounded-full object-cover -mx-2 border-2 border-white"
+              alt="no image found"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+              class="w-10 h-10 rounded-full object-cover -mx-2 border-2 border-white"
+              alt="no image found"
+            />
+            <i
+              class="ri-add-line bg-black w-10 h-10 rounded-full object-cover -mx-2 flex justify-center items-center text-white text-xl border-2 border-white"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD - cubo digital studio -->
+      <div
+        class="xl:col-span-3 xl:row-span-3 bg-[#FBF6F7] rounded-3xl flex flex-col items-center justify-center py-4 lg:col-span-1 lg:row-span-1 gap-1.5"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/overlap-circle.png"
+            class="w-[30%] xl:w-[20%] animate-spin [animation-duration:20s]"
+            alt="image not found"
+          />
+          <p class="font-bold text-3xl md:text-5xl text-center">CUBO</p>
+          <p class="font-bold text-lg text-pink-400 text-center">
+            Digital Studio
+          </p>
+        </div>
+        <button class="bg-[#FDC8CE] font-bold px-5 py-2 rounded-2xl">
+          Discover more
+        </button>
+      </div>
+
+      <!-- CARD - font -->
+      <div
+        class="xl:col-span-2 xl:row-span-2 rounded-3xl p-4 lg:p-2.5 bg-[#FAF5F7] font-bold flex flex-col justify-between lg:col-span-1 lg:row-span-1"
+      >
+        <div class="flex justify-between">
+          <div class="text-xl lg:text-2xl xl:text-xl">
+            <h1>Font</h1>
+            <p class="text-sm text-gray-800">Sk - Modernist</p>
+          </div>
+          <div
+            class="h-7 w-7 bg-[#FCE1E1] rounded-lg flex justify-center items-center md:rounded-xl xl:rounded-lg md:h-12 md:w-12 xl:h-7 xl:w-7 font-bold md:text-2xl xl:text-base"
+          >
+            A<sub>a</sub>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div
+            class="h-7 w-7 bg-black rounded-lg md:rounded-xl xl:rounded-lg md:h-12 md:w-12 xl:h-7 xl:w-7"
+          ></div>
+          <div
+            class="h-7 w-7 bg-[#aeb0b0] rounded-lg md:rounded-xl xl:rounded-lg md:h-12 md:w-12 xl:h-7 xl:w-7"
+          ></div>
+          <div
+            class="h-7 w-7 bg-[#fd778e] rounded-lg md:rounded-xl xl:rounded-lg md:h-12 md:w-12 xl:h-7 xl:w-7"
+          ></div>
+          <div
+            class="h-7 w-7 bg-[#fdd5d8] rounded-lg md:rounded-xl xl:rounded-lg md:h-12 md:w-12 xl:h-7 xl:w-7"
+          ></div>
+        </div>
+        <button class="flex bg-gray-300 font-bold px-3 py-1 rounded-2xl w-fit">
+          View all fonts
+        </button>
+      </div>
+
+      <!-- CARD - we buid future  -->
+      <div
+        class="relative col-span-2 md:col-span-1 xl:col-span-4 xl:row-span-2 bg-[#FEF2F3] rounded-3xl p-4 lg:p-4 xl:p-3 flex justify-between overflow-hidden lg:col-span-2 lg:row-span-1"
+      >
+        <div
+          class="absolute bg-[#FBE4E5] w-60 h-60 rounded-full left-[90%] top-[50%] -translate-x-1/2 -translate-y-1/2"
+        ></div>
+        <div class="font-bold flex flex-col gap-2 justify-between">
+          <h1 class="text-xl lg:text-2xl xl:text-base">
+            We Build Future of <br />
+            Design Industry
+          </h1>
+          <p class="text-base z-10 text-gray-700">
+            Crafting Meaningful <br class="hidden md:block lg:hidden" />
+            UX/UI Design
+          </p>
+          <button
+            class="flex gap-1 bg-black font-bold px-4 py-1 rounded-2xl w-fit text-white"
+          >
+            <h1 class="text-sm">Explore more</h1>
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+        </div>
+        <img
+          src="assets/flower.png"
+          class="h-28 z-1 lg:h-35 xl:h-28"
+          alt="image not found"
+        />
+      </div>
+
+      <!-- footer - max - lg -->
+      <footer
+        class="xl:hidden col-span-2 flex py-1.5 sticky bottom-0 z-50 bg-black justify-around text-gray-300 lg:col-span-3"
+      >
+        <div class="hidden md:flex md:flex-col md:items-center">
+          <i class="ri-home-9-line text-3xl"></i>
+          <span class="font-bold">Dashboard</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <i class="ri-bar-chart-fill text-3xl"></i>
+          <span class="font-bold">Analytics</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="ri-group-line text-3xl"></i>
+          <span class="font-bold">Clients</span>
+        </div>
+        <div class="hidden md:flex md:flex-col md:items-center">
+          <i class="ri-team-line text-3xl"></i>
+          <span class="font-bold">Team</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <i class="ri-search-line text-3xl"></i>
+          <span class="font-bold">Search</span>
+        </div>
+        <div class="hidden md:flex md:flex-col md:items-center">
+          <i class="ri-file-text-line text-3xl"></i>
+          <span class="font-bold">Reports</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="ri-folder-6-line text-3xl"></i>
+          <span class="font-bold">Projects</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="ri-settings-line text-3xl"></i>
+          <span class="font-bold">Settings</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+<!-- The end -->
