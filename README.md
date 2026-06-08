@@ -8,17 +8,19 @@ https://tailwind-cubo-digital-studio-sudhanshu.vercel.app/
 
 ## 💻 Preview
 
-### Desktop
-![Desktop Preview](preview/desktop-preview.png)
+### Desktop & Mobile
 
-### Tablet (Landscape)
-![Tablet Landscape Preview](preview/tablet-landscape.png)
+<p align="center">
+  <img src="./preview/desktop.jpg" width="70%">
+  <img src="./preview/mobile.jpg" width="20%">
+</p>
 
-### Tablet (Portrait)
-![Tablet Portrait Preview](preview/tablet-portrait.png)
+### Tablet Views
 
-### Mobile
-![Mobile Preview](preview/mobile-preview.png)
+<p align="center">
+  <img src="./preview/tablet-portrait.jpg" width="27%">
+  <img src="./preview/tablet-landscape.jpg" width="48%">
+</p>
 
 ## ✨ Features
 
