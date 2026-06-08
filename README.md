@@ -1,9 +1,10 @@
 # Tailwind CUBO Digital Studio 🎨
 
-A modern and responsive digital agency dashboard built using HTML5 and Tailwind CSS.
-The project focuses on responsive layouts, dashboard components, analytics cards, and clean UI design across mobile, tablet, and desktop devices.
+A modern and responsive digital agency dashboard built with HTML5 and Tailwind CSS. The project focuses on responsive layouts, dashboard components, analytics cards, and clean UI design across mobile, tablet, and desktop devices.
 
-🔗 **Live Demo:** https://tailwind-cubo-digital-studio-sudhanshu.vercel.app/
+## 🔗 Live Demo
+
+https://tailwind-cubo-digital-studio-sudhanshu.vercel.app/
 
 ## 💻 Preview
 
