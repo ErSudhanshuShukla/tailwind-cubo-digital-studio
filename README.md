@@ -52,4 +52,4 @@ https://tailwind-cubo-digital-studio-sudhanshu.vercel.app/
 
 **Sudhanshu Shukla**
 
-GitHub: https://github.com/ersudhanshushukla
+[GitHub](https://github.com/ErSudhanshuShukla) | [LinkedIn](https://www.linkedin.com/in/ErSudhanshuShukla)
